@@ -1,6 +1,13 @@
 // tsconfig.json
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["pages/*"]
+      // "@api/*": ["src/lib/api/*"],
+      // "@assets/*": ["src/assets/*"]
+    },
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
