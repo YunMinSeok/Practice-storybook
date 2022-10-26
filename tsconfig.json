@@ -28,6 +28,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["src", "pages", "styles", "next.config.js", "next-env.d.ts"],
+  "include": [
+    "src",
+    "pages",
+    "styles",
+    "next.config.js",
+    "next-env.d.ts",
+    ".eslintrc.js",
+    "stories"
+  ],
   "exclude": ["node_modules"]
 }

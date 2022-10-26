@@ -35,6 +35,13 @@
     "import/extensions": ["off"],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.stories.*", "**/.storybook/**/*.*"],
+        "peerDependencies": true
+      }
+    ],
     "@typescript-eslint/no-var-requires": "off", // require 사용을 방지
     "@typescript-eslint/explicit-module-boundary-types": "off", //values returned from a module are of the expected type.
     "no-nested-ternary": "off", // 삼항연산안에 또 삼항연산 하는 것을 방지
@@ -57,7 +64,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx", ".js", ".stories"]
+      "@typescript-eslint/parser": [".ts", ".tsx", ".js"]
     }
   }
 }
