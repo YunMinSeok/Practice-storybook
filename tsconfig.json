@@ -3,22 +3,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ]
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["pages/*"]
       // "@api/*": ["src/lib/api/*"],
       // "@assets/*": ["src/assets/*"]
     },
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -45,7 +38,6 @@
     ".eslintrc.js",
     "stories"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"],
+  "jsxImportSource": "@emotion/react"
 }
