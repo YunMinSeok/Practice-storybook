@@ -39,6 +39,5 @@
     "stories"
   ],
   "exclude": ["node_modules"],
-  "jsxImportSource": "@emotion/react",
-  "types": ["@emotion/react/types/css-prop"]
+  "jsxImportSource": "@emotion/react"
 }
