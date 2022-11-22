@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { widthKnobs, text, boolean, select } from "@storybook/addon-knobs";
+import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import Button from "./Button";
 
 export default {
   title: "components|Button",
   component: Button,
-  decorator: [widthKnobs],
+  decorator: [withKnobs],
 };
 
 export const button = () => {
