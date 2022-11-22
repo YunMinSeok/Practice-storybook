@@ -32,7 +32,7 @@ const buttonWrapper = css`
   .description {
     margin-bottom: 0.5rem;
   }
-  $ > div + div {
+  & > div + div {
     margin-top: 2rem;
   }
 `;
@@ -51,6 +51,26 @@ export const sizes = () => {
       <div>
         <div className="description">Big</div>
         <Button size="big">BUTTON</Button>
+      </div>
+    </div>
+  );
+};
+
+export const disabled = () => {
+  return (
+    <div css={buttonWrapper}>
+      <div>
+        <Button disabled>PRIMARY</Button>
+      </div>
+      <div>
+        <Button disabled theme="secondary">
+          SECONDARY
+        </Button>
+      </div>
+      <div>
+        <Button disabled theme="tertiary">
+          TERRIARY
+        </Button>
       </div>
     </div>
   );
