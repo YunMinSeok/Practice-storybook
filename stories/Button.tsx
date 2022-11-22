@@ -13,6 +13,8 @@ type ButtonProps = {
   size?: "small" | "medium" | "big";
   /** 버튼을 비활성화 시킵니다. */
   disabled?: boolean;
+  /** 버튼의 너비를 임의로 설정합니다. */
+  width?: string | number;
 };
 
 const Button = ({
@@ -20,12 +22,13 @@ const Button = ({
   theme = "primary",
   size = "medium",
   disabled,
+  width,
   onClick,
 }: ButtonProps) => {
   return (
     <button
       type="button"
-      css={[style, themes[theme], sizes[size]]}
+      css={[style, themes[theme], sizes[size], { width }]}
       disabled={disabled}
       onClick={onClick}
     >
