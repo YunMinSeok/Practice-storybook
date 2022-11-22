@@ -17,3 +17,11 @@ button.story = {
 export const primaryButton = () => {
   return <Button>PRIMARY</Button>;
 };
+
+export const secondaryButton = () => {
+  return <Button theme="secondary">SECONDARY</Button>;
+};
+
+export const tertiaryButton = () => {
+  return <Button theme="tertiary">TERTIARY</Button>;
+};
