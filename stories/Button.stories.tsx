@@ -1,15 +1,37 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React from "react";
+import { widthKnobs, text, boolean, select } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
 import Button from "./Button";
 
 export default {
   title: "components|Button",
   component: Button,
+  decorator: [widthKnobs],
 };
 
 export const button = () => {
-  return <Button>BUTTON</Button>;
+  const label = text("children", "BUTTON");
+  const size = select("size", ["small", "medium", "big"], "medium");
+  const theme = select(
+    "theme",
+    ["primary", "secondary", "tertiary"],
+    "primary",
+  );
+  const disabled = boolean("disabled", false);
+  const width = text("width", "");
+
+  return (
+    <Button
+      size={size}
+      theme={theme}
+      disabled={disabled}
+      width={width}
+      onClick={action("onClick")}
+    >
+      {label}
+    </Button>
+  );
 };
 
 button.story = {
