@@ -27,7 +27,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "jsxImportSource": "@emotion/react"
   },
   "include": [
     "src",
@@ -38,6 +39,5 @@
     ".eslintrc.js",
     "stories"
   ],
-  "exclude": ["node_modules"],
-  "jsxImportSource": "@emotion/react"
+  "exclude": ["node_modules"]
 }

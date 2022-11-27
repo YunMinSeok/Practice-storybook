@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import * as icons from "./svg";
+import * as icons from "./svg/index";
 
 type IconType = keyof typeof icons;
 export const iconTypes: IconType[] = Object.keys(icons) as any[];
@@ -20,6 +20,7 @@ export type IconProps = {
  * 스타일로 모양새를 설정 할 때에는 `color`로 색상을 설정하고 `width`로 크기를 설정하세요.
  */
 const Icon = ({ icon, color, size, className }: IconProps) => {
+  console.log(icons);
   const SVGIcon = icons[icon];
   return (
     <SVGIcon
