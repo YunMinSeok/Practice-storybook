@@ -37,7 +37,8 @@
     "next.config.js",
     "next-env.d.ts",
     ".eslintrc.js",
-    "stories"
+    "stories",
+    "pages/custom.d.ts"
   ],
   "exclude": ["node_modules"]
 }
