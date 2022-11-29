@@ -38,7 +38,7 @@
     "next-env.d.ts",
     ".eslintrc.js",
     "stories",
-    "stories/*.d.ts"
+    "stories/typing.d.ts"
   ],
   "exclude": ["node_modules"]
 }
