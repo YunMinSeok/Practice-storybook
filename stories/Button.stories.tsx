@@ -130,3 +130,21 @@ export const withIcon = () => {
     </div>
   );
 };
+
+export const iconOnly = () => {
+  return (
+    <div>
+      <ButtonGroup>
+        <Button iconOnly size="small">
+          <Icon icon="heart" />
+        </Button>
+        <Button iconOnly>
+          <Icon icon="heart" />
+        </Button>
+        <Button iconOnly size="big">
+          <Icon icon="heart" />
+        </Button>
+      </ButtonGroup>
+    </div>
+  );
+};
