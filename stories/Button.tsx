@@ -15,6 +15,8 @@ type ButtonProps = {
   disabled?: boolean;
   /** 버튼의 너비를 임의로 설정합니다. */
   width?: string | number;
+  /** 버튼에서 아이콘만 보여줄 때 이 값을 `true`로 설정하세요. */
+  iconOnly?: boolean;
 };
 
 const Button = ({
@@ -23,12 +25,19 @@ const Button = ({
   size = "medium",
   disabled,
   width,
+  iconOnly,
   onClick,
 }: ButtonProps) => {
   return (
     <button
       type="button"
-      css={[style, themes[theme], sizes[size], { width }]}
+      css={[
+        style,
+        themes[theme],
+        sizes[size],
+        { width },
+        iconOnly && [iconOnlyStyle, iconOnlySizes[size]],
+      ]}
       disabled={disabled}
       onClick={onClick}
     >
@@ -134,6 +143,26 @@ const sizes = {
     height: 3rem;
     font-size: 1.125rem;
     padding: 0 1.5rem;
+  `,
+};
+
+const iconOnlyStyle = css`
+  padding: 0;
+  border-radius: 50%;
+  svg {
+    margin: 0;
+  }
+`;
+
+const iconOnlySizes = {
+  small: css`
+    width: 1.75rem;
+  `,
+  medium: css`
+    width: 2.5rem;
+  `,
+  big: css`
+    width: 3rem;
   `,
 };
 
