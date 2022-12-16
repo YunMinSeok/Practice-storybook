@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",
@@ -14,5 +16,24 @@ module.exports = {
   },
   typescript: {
     reactDocgen: false,
+  },
+  webpackFinal: async (config) => {
+    config.module.rules.unshift({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+
+    config.resolve.modules = [
+      path.resolve(__dirname, ".."),
+      "node_modules",
+      "styles",
+    ];
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@components": path.resolve(__dirname, "../pages"),
+    };
+
+    return config;
   },
 };
