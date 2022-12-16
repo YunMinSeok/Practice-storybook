@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@storybook/addon-knobs": "^6.4.0",
+    "@svgr/webpack": "^6.5.1",
     "next": "12.3.1",
     "react": "^17.0.2",
     "react-docgen-typescript-loader": "^3.7.2",
