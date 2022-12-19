@@ -58,6 +58,10 @@ const style = css`
   border-radius: 0.25rem;
   line-height: 1;
   font-weight: 600;
+  svg {
+    width: 1em;
+    margin-right: 1em;
+  }
   &:focus {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   }
