@@ -23,10 +23,9 @@ export const customizedWithStyle = () => (
 export const listOfIcons = () => {
   return (
     <ul css={iconListStyle}>
-      {iconTypes.map((icon) => (
-        <li key={icon}>
-          <Icon icon={icon} />
-          {icon}
+      {iconTypes.map((value) => (
+        <li key={value}>
+          <Icon icon={value} />
         </li>
       ))}
     </ul>
