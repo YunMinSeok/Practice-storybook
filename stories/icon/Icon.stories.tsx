@@ -7,7 +7,11 @@ export default {
   title: "components|Icon",
 };
 
-export const icon = () => <Icon icon="heart" />;
+type iconProps = {
+  story: { name: string };
+};
+
+export const icon: iconProps = () => <Icon icon="heart" />;
 icon.story = {
   name: "Default",
 };
@@ -26,8 +30,8 @@ export const listOfIcons = () => {
       {iconTypes.map((value) => {
         return (
           <li key={value}>
-            <Icon icon={value} />
             {icon}
+            <Icon icon={value} />
           </li>
         );
       })}
