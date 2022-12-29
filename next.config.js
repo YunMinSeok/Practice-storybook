@@ -1,11 +1,3 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compiler: {
-    emotion: true,
-  },
-};
 module.exports = {
   webpack(config) {
     config.module.rules.push({
@@ -16,5 +8,3 @@ module.exports = {
     return config;
   },
 };
-
-module.exports = nextConfig;
