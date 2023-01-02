@@ -28,16 +28,16 @@
     "jsxImportSource": "@emotion/react"
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "typing.d.ts",
     "src",
     "pages",
     "styles",
     "next.config.js",
     "next-env.d.ts",
     ".eslintrc.js",
-    "stories"
+    "stories",
+    "**/*.ts",
+    "**/*.tsx",
+    "typing.d.ts"
   ],
   "exclude": ["node_modules"]
 }
