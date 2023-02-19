@@ -28,6 +28,7 @@ export const listOfIcons = () => {
   return (
     <ul css={iconListStyle}>
       {iconTypes.map((value) => {
+        console.log(value);
         return (
           <li key={value}>
             {icon}
