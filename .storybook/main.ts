@@ -18,11 +18,6 @@ module.exports = {
     reactDocgen: false,
   },
   webpackFinal: async (config) => {
-    config.module.rules.unshift({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-
     config.resolve.modules = [
       path.resolve(__dirname, ".."),
       "node_modules",

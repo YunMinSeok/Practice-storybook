@@ -6,19 +6,7 @@ module.exports = ({ config, mode }) => {
         loader: require.resolve("babel-loader"),
         options: {
           presets: [["react-app", { flow: false, typescript: true }]],
-          plugins: [
-            [
-              require.resolve("babel-plugin-named-asset-import"),
-              {
-                loaderMap: {
-                  svg: {
-                    ReactComponent:
-                      "@svgr/webpack?-svgo,+titleProp,+ref![path]",
-                  },
-                },
-              },
-            ],
-          ],
+          plugins: [[require.resolve("babel-plugin-named-asset-import")]],
         },
       },
       require.resolve("react-docgen-typescript-loader"),

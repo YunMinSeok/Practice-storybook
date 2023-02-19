@@ -15,7 +15,6 @@ export type IconProps = {
 };
 
 const Icon = ({ icon, color, size, className }: IconProps) => {
-  console.log(icons[icon]);
   const SVGIcon = icons[icon];
   return (
     <SVGIcon
